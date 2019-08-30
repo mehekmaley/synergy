@@ -40,30 +40,80 @@
     </style>
   </head>
   <body>
+    <body>
+      <div class="bg-top navbar-light">
+        <div class="container">
+          <div class="row no-gutters d-flex align-items-center align-items-stretch">
+            <div class="col-md-4 d-flex align-items-center py-4">
+              <a class="navbar-brand" href="index.html">Fox. <span>University</span></a>
+            </div>
+            <div class="col-lg-8 d-block">
+              <div class="row d-flex">
+                <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
+                  <div class="icon d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
+                  <div class="text">
+                    <span>Email</span>
+                    <span>youremail@email.com</span>
+                  </div>
+                </div>
+                <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
+                  <div class="icon d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
+                  <div class="text">
+                    <span>Call</span>
+                    <span>Call Us: + 1235 2355 98</span>
+                  </div>
+                </div>
+                <div class="col-md topper d-flex align-items-center justify-content-end">
+                  <div class="btn-group">
+        
+                  <!-- <p class="mb-0"> -->
+                  <!-- <a href="upload.html" class="btn py-2 px-3 btn-primary d-flex align-items-center justify-content-center">
+                    <span>Upload</span>
+                  </a> -->
+                  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Login
+                    </button>
+                    <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Student Sign in</a>
+                    <a class="dropdown-item" href="#">Admin sign-in</a>
+                    <!-- <a class="dropdown-item" href="#">Something else here</a> -->
+                  </div>
+                  <!-- </p> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
     <div id="menu">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
-          <div class="container d-flex align-items-center px-4">
-                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="oi oi-menu"></span> Menu
-            </button>
-            <form action="#" class="searchform order-lg-last">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container d-flex align-items-center px-4">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="oi oi-menu"></span> Menu
+          </button>
+          <form action="#" class="searchform order-lg-last">
             <div class="form-group d-flex">
               <input type="text" class="form-control pl-3" id="myInput" placeholder="Search...">
               
             </div>
           </form>
-            <div class="collapse navbar-collapse" id="ftco-nav">
-              <ul class="navbar-nav mr-auto">
-                  <li class="nav-item active"><a href="index.html" class="nav-link pl-0">Home</a></li>
-                  <li class="nav-item"><a href="about.html" class="nav-link">Academic Year</a></li>
-                  <li class="nav-item"><a href="courses.html" class="nav-link">Guide</a></li>
-                  <li class="nav-item"><a href="teacher.html" class="nav-link">Department</a></li>
-                  <li class="nav-item"><a href="blog.html" class="nav-link">Grade</a></li>
-              </ul>
-            </div>
+          <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active"><a href="index.html" class="nav-link pl-0">Home</a></li>
+              <li class="nav-item"><a href="adv_search.html" class="nav-link">Advance Search</a></li>
+          <li class="nav-item"><a href="admin_panel.html" class="nav-link">Admin-Login</a></li>
+          <li class="nav-item"><a href="upload.html" class="nav-link">Upload</a></li>
+  
+              <!-- <li class="nav-item"><a href="teacher.html" class="nav-link">Department</a></li>
+              <li class="nav-item"><a href="blog.html" class="nav-link">Grade</a></li> -->
+              
+            </ul>
           </div>
-        </nav>
-      </div>
+        </div>
+      </nav>
+    </div>
+      <!-- END nav -->
       <div class="container">
           <form>
                 <div class="form-row">
@@ -105,47 +155,17 @@
                         <input type="number" class="form-control" id="score" placeholder="Score">
                     </div>
                 </div>
-                <div class="form-group" style="font-weight: normal;">
-                    <label>Do you have a Research Paper ?</label><br>
-                    <label class="radio-inline">
-                        <input type="radio" name="optradio" checked="checked" class="radio" id="yes" value="yes"> YES
-                    </label>
-                    <label class="radio-inline">
-                        <input type="radio" name="optradio" class="radio" id="no" value="no"> NO
-                    </label>
-                        
+                <div class="form-group">
+                  <label>Do you have a Research Paper ?</label>
+                  <input type="text" class="form-control" id="r_paper" placeholder="Y / N">
                 </div>
-                <div class="form-group" style="font-weight: normal;">
-                    <label>Department</label><br>
-                    <label class="radio-inline">
-                        <input type="radio" name="dept" checked="checked" class="radio" id="cs" value="COMPS"> Computer
-                    </label>
-                    <label class="radio-inline">
-                        <input type="radio" name="dept" class="radio" id="it" value="IT"> Information Technology
-                    </label>
-                    <label class="radio-inline">
-                        <input type="radio" name="dept" class="radio" id="prod" value="PROD"> Production
-                    </label>
-                    <label class="radio-inline">
-                        <input type="radio" name="dept" class="radio" id="ex" value="EX"> Electronics
-                    </label>
-                        
+                <div class="form-group">
+                  <label>Department</label>
+                  <input type="text" class="form-control" id="dept" placeholder="Computer/IT/Production/Electronics">
                 </div>
-                <div class="form-group" style="font-weight: normal;">
-                    <label>Class</label><br>
-                    <label class="radio-inline">
-                        <input type="radio" name="cl" checked class="radio" id="fe" value="FE"> First Year
-                    </label>
-                    <label class="radio-inline">
-                        <input type="radio" name="cl" class="radio" id="se" value="SE"> Second Year
-                    </label>
-                    <label class="radio-inline">
-                        <input type="radio" name="cl" class="radio" id="te" value="TE"> Third Year
-                    </label>
-                    <label class="radio-inline">
-                        <input type="radio" name="cl" class="radio" id="be" value="BE"> Final Year
-                    </label>
-                        
+                <div class="form-group">
+                  <label>Year</label>
+                  <input type="text" class="form-control" id="year" placeholder="FE / SE / TE / BE">
                 </div>
                 
                 

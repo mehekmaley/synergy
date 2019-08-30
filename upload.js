@@ -22,9 +22,9 @@ var title = document.getElementById("title");
 var score = document.getElementById("score");
 var acadyear = document.getElementById("acadyear");
 var domain = document.getElementById("domain");
-var $respaper = document.querySelector('input[name=optradio]:checked').value;
-var $dept = document.querySelector('input[name=dept]:checked').value;
-var $cl = document.querySelector('input[name=cl]:checked').value;
+var respaper = document.getElementById("r_paper");
+var dept = document.getElementById("dept");
+var cl = document.getElementById("year");
 var sub = document.getElementById('sub1');
 var oid;
 var file;
@@ -117,11 +117,11 @@ fileButtonp.addEventListener('change',function(e) {
             name: name,
             github: gitid.value,
             guide: guide.value,
-            researchpaper: $respaper,
+            researchpaper: respaper.value,
             tag: a,
             title: title.value,
-            dept: $dept,
-            class: $cl,
+            dept: dept.value,
+            class: cl.value,
             score: score.value,
             acadyear: acadyear.value,
             domain: domain.value,
@@ -135,6 +135,9 @@ fileButtonp.addEventListener('change',function(e) {
         document.getElementById("l_name").value="";
          document.getElementById("guide").value="";
          document.getElementById("title").value="";
+         document.getElementById("year").value="";
+         document.getElementById("dept").value="";
+         document.getElementById("r_paper").value="";
          document.getElementById("git_id").value="";
          document.getElementById('uploaderr').value = "";
          document.getElementById('uploaderp').value = "";
@@ -197,6 +200,8 @@ fileButtonp.addEventListener('change',function(e) {
             
         },{merge: true});
         console.log("hogya");
+        console.log(dept);
+        console.log($( "#myselect option:selected" ).text());
          
     }
     function report() {
@@ -253,6 +258,7 @@ fileButtonp.addEventListener('change',function(e) {
             
         },{merge: true});
         console.log("hogya");
+        
          
     }
 
@@ -262,6 +268,9 @@ function reload() {
     document.getElementById("f_name").value="";
         document.getElementById("l_name").value="";
          document.getElementById("guide").value="";
+         document.getElementById("dept").value="";
+         document.getElementById("r_paper").value="";
+         document.getElementById("year").value="";
          document.getElementById("title").value="";
          document.getElementById("git_id").value="";
          document.getElementById('uploaderr').value = "";
