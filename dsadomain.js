@@ -11,48 +11,20 @@ $(document).ready(function(){
     });
   });
 
-var web = document.getElementById("web");
-web.addEventListener('click',webdomain);
 
-var ml = document.getElementById("ml");
-ml.addEventListener('click',mldomain);
+firebase.firestore().collection("project").where('domain','==','DSA').get().then((snapshot) => {
+    snapshot.docs.forEach(doc => {
+      console.log(doc.id);
+      renderTitle(doc);
+      
+    })
+  });
 
-var dsa = document.getElementById("dsa");
-dsa.addEventListener('click',dsadomain);
-
-var iot = document.getElementById("iot");
-iot.addEventListener('click',iotdomain);
-
-function webdomain() {
-  console.log("webbb");
-  window.location.href = 'webdomain.html';
-}
-
-function mldomain() {
-  console.log("mllbbb");
-  window.location.href = 'mldomain.html';
-}
-
-function dsadomain() {
-  console.log("bb");
-  window.location.href = 'dsadomain.html';
-}
-
-function iotdomain() {
-  console.log("wiotbb");
-  window.location.href = 'iotdomain.html';
-}
+  const titleList = document.querySelector('#title-list');
+    const menu = document.querySelector('#menu');
 
 
-var idd;
-const titleList = document.querySelector('#title-list');
-const menu = document.querySelector('#menu');
-
-
-
-
-
-function renderTitle(doc){
+  function renderTitle(doc){
     
     let div = document.createElement('div');
     
@@ -158,18 +130,3 @@ function renderTitle(doc){
     
 
 }
-var lii = document.getElementsByClassName("docData");
-console.log(lii);
-// $("#myInput").on("click", function() {
-//   document.getElementById("fourblock").style.display = "none";
-// });
-
-
-
-firebase.firestore().collection("project").get().then((snapshot) => {
-    snapshot.docs.forEach(doc => {
-      console.log(doc.id);
-      renderTitle(doc);
-      
-    })
-  });
