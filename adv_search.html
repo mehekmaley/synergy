@@ -26,16 +26,7 @@
 	<script src="https://www.gstatic.com/firebasejs/6.4.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.4.1/firebase-storage.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.4.1/firebase-firestore.js"></script>
-    <script>
-      $(document).ready(function(){
-        $("#formGroupExampleInput1").on("keyup", function() {
-          var value = $(this).val().toLowerCase();
-          $("#myTable tr").filter(function() {
-            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-          });
-        });
-      });
-      </script>
+    
   </head>
   <body>
 	  <div class="bg-top navbar-light">
@@ -149,15 +140,15 @@
           
           <div class="form-group">
             <label for="formGroupExampleInput">Academic Year</label>
-            <input type="text" class="form-control" id="formGroupExampleInput1" placeholder="Academic Year">
+            <input type="text" class="form-control" id="year" placeholder="Academic Year">
           </div>
           <div class="form-group">
             <label for="formGroupExampleInput">Score Assigned</label>
-            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Score Obtained">
+            <input type="text" class="form-control" id="score" placeholder="Score Obtained">
           </div>
           <div class="form-group">
             <label for="formGroupExampleInput">Department</label>
-            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Department">
+            <input type="text" class="form-control" id="dept" placeholder="Department">
           </div>
           <!-- <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
             <div class="dropdown">
@@ -185,15 +176,32 @@
           </div>
         </div>
       </div> -->
-      <button class="btn btn-primary" id ="search_button" type="submit">Search</button>
+      <button class="btn btn-primary" id ="search" type="submit">Search</button>
     </div>
   </div>
 </div>
 </div>
-<section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(images/bg_3.jpg);" data-stellar-background-ratio="0.5" >-->
-  <div class="container" id="cont">
-    <ul id="title-list"></ul>
-    </div>	
+<section class="ftco-section ftco-counter img" id="section-counter"  data-stellar-background-ratio="0.5" >-->
+  <div class="container" id="cont"></div>
+            <table id="project-list">
+            
+                <thead>
+                    <tr>
+                        <th>ACADEMIC YEAR</th>
+                        <th>DEPARTMENT</th>
+                        <th>CLASS</th>
+                        <th>NAME</th>
+                        <th>PROJECT DOMAIN</TOTAL>
+                        <th>PROJECT TITLE</TOTAL>
+                        <th>PROJECT GUIDE</TOTAL>
+                        <th>SCORE</TOTAL>
+                    </tr>
+                </thead>
+                <tbody id="tbid">
+                    
+                </tbody>               
+                </table>
+            </div>	
     <div class="row d-md-flex align-items-center justify-content-center">
       <div class="col-lg-12">
         <div class="row d-md-flex align-items-center">
@@ -245,7 +253,7 @@
         <ul id="title-list"></ul>
     </div> --> -->
     <script src="js/config.js"></script>    
-  <script src="js/index.js"></script>
+  <script src="js/adv_search.js"></script>
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
   <script src="js/popper.min.js"></script>
